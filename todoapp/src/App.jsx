@@ -31,7 +31,7 @@ function App() {
   const CAside = <AsideLeft/>
   return (
     <>
-    {/* <NavBar Position="position-absolute" Left={[Hi,Hi,Hi]} /> */}
+    <NavBar Position="position-absolute" Left={[Hi,Hi,Hi]} />
     <Partitionar LeftContent={""} RightContent={<SingIn/>}/>
     
     

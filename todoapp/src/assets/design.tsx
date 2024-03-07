@@ -1,13 +1,12 @@
-///////////////////////////////////////////////////////////// 
-// 
+/////////////////////////////////////////////////////////////
+//
 //  @
 //  Made On Marh 06 '24
 //
 //
-///////////////////////////////////////////////////////////// 
+/////////////////////////////////////////////////////////////
 
-
-import React from "react";
+import React, { useState } from "react";
 
 interface ButtonProps {
   Name: string;
@@ -62,15 +61,17 @@ function CreateButtons({
 function CheckBox({ Name, Id, Value = "", label }) {
   return (
     <>
-    <div className="relative flex flex-row  items-center justify-center ">
-      <input
-        type="checkbox"
-        className="required:border-red-500 default:ring-2 indeterminate:bg-gray-300 mx-1"
-        name={Name}
-        id={Id}
-        value={Value}
-      />
-      <label htmlFor={Id} className="text-xs text-gray-500 "> {label}</label>
+      <div className="relative flex flex-row  items-center justify-center ">
+        <input
+          type="checkbox"
+          className="required:border-red-500 default:ring-2 indeterminate:bg-gray-300 mx-1"
+          name={Name}
+          id={Id}
+          value={Value}
+        />
+        <label htmlFor={Id} className="text-xs text-gray-500 ">
+          {label}
+        </label>
       </div>
     </>
   );
@@ -98,14 +99,13 @@ function Input({ type = "text", id, name, label }) {
 function ParalleInput({ FInput, SInput }) {
   return (
     <>
-    <div className="relative flex flex-row items-center w-full gap-1">
-      <div className="relative flex flex-col items-center w-50">{FInput}</div>
-      <div className="relative flex flex-col items-center w-50">{SInput}</div>
-    </div>
+      <div className="relative flex flex-row items-center w-full gap-1">
+        <div className="relative flex flex-col items-center w-50">{FInput}</div>
+        <div className="relative flex flex-col items-center w-50">{SInput}</div>
+      </div>
     </>
   );
 }
-
 
 function Form({ Heading, Tags, Button }) {
   return (
@@ -114,7 +114,7 @@ function Form({ Heading, Tags, Button }) {
         <h1 className="text-gray-900 text-5xl font-medium title-font mb-3 custom-center">
           {Heading}
         </h1>
-       
+
         {Tags.map((tag) => (
           <div className="relative mb-3 flex flex-col items-center w-full gap-1">
             {tag}
@@ -152,6 +152,17 @@ function Partitionar({ LeftContent, RightContent }) {
   );
 }
 
+// TODO :: Need to implemented
+
+function TextEffect() {
+  let Write = <h1></h1>;
+  let [Base, setBase] = useState(Write);
+
+  return <>
+    {Base}
+  </>;
+}
+
 export {
   Form,
   Partitionar,
@@ -161,4 +172,5 @@ export {
   ParalleInput,
   CreateButtons,
   CheckBox,
+  TextEffect,
 };
