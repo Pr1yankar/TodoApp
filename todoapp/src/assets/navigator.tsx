@@ -7,31 +7,32 @@
 ///////////////////////////////////////////////////////////// 
 
 import React from "react";
+import "./App.css"
 
 
-
-interface Prop {
+interface INav {
   Position : string ;
   Icon : string ;
   Left? : [];
   Center? : [] ;
   Right? : [] ;
+  ExtraCss? : string;
 }
 
 
 
-function NavBar({ Position, Icon, Left = [], Center = [], Right=[] } : Prop) {
+function NavBar({ Position, Icon, Left = [], Center = [], Right=[] , ExtraCss} : INav) {
 
   
 
   return (
-    <header className={"container text-gray-600 body-font w-full py-3 " + Position }>
-      <div className={"grid grid-cols-3 gap-4 w-full "}>
+    <header className={"container-fluid text-gray-600 body-font w-full py-1 glass-container2 " + Position + " " + ExtraCss }>
+      <div className={"grid grid-cols-3  w-full items-center "}>
         
         
 
         <div>
-          <div className="flex flex-row justify-content-start">
+          <div className="d-flex flex-row justify-content-start items-center ">
             {Icon}
             {Left.map((items) => (
               <div className="px-2">{items}</div>
@@ -43,7 +44,7 @@ function NavBar({ Position, Icon, Left = [], Center = [], Right=[] } : Prop) {
         
         <div>
       
-          <div className="d-flex flex-row justify-content-evenly">
+          <div className="d-flex flex-row justify-content-evenly items-center ">
             {Center.map((items) => (
               <div className="px-2">{items}</div>
             ))}
@@ -54,7 +55,7 @@ function NavBar({ Position, Icon, Left = [], Center = [], Right=[] } : Prop) {
         {/* Right */}
 
         <div>
-          <div className="d-flex flex-row justify-content-end">
+          <div className="d-flex flex-row justify-content-end items-center ">
             {Right.map((items) => (
               <div className="px-2">{items}</div>
             ))}
@@ -64,5 +65,52 @@ function NavBar({ Position, Icon, Left = [], Center = [], Right=[] } : Prop) {
     </header>
   );
 }
+
+
+interface INavButton{
+  Name : string ;
+  link : string ;
+  id : string ;
+}
+
+interface INavButtons{
+  Buttons : INavButton[] ;
+  ActiveCss : string ;
+  NotActive : string ;
+  CommonCss : string ;
+
+}
+
+
+function NavButtons ({Buttons = [] , ActiveCss , NotActive , CommonCss} : INavButtons) {
+
+  function DeActivate(){
+    
+  }
+
+
+
+  <>
+    {
+      Buttons.map((btn) => (
+        <a href={btn.link} className={"btn border-none " +{CommonCss} } id={btn.id} >
+          <p>
+            {btn.Name}
+          </p>
+        </a>
+      ))
+    }
+  </>
+
+}
+
+
+
+
+
+
+
+
+
 
 export default NavBar;
