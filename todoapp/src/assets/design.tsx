@@ -27,7 +27,7 @@ function CreateButtons({
 }: ButtonProps) {
   if (Button_Size != "") Button_Size = "btn-" + Button_Size;
  
-  let st =`btn btn-${Style} ${Button_Size} rounded-4 font-bold text-center font-mono text-slate-900 hover:text-zinc-50 custom-font px-4 ${ExtraCss}`;
+  let st =`btn btn-${Style} ${Button_Size} rounded-4 font-bold text-center font-mono  custom-font px-4 ${ExtraCss}`;
   return (
 
         <a
@@ -61,7 +61,8 @@ function CheckBox({ Name, Id, Value = "", label }) {
   );
 }
 
-function Input({ type = "text", id, name, label, LabelExtraCss , InputExtraCss }) {
+function Input({ type = "text", id, name, label, LabelExtraCss ,InputExtraCss  }) {
+  
   return (
     <>
       <label
@@ -76,7 +77,7 @@ function Input({ type = "text", id, name, label, LabelExtraCss , InputExtraCss }
         id={id}
         name={name}
         className={`w-full bg-transparent rounded-5 border border-gray-300 focus:border-indigo-500focus:ring-2 focus:ring-indigo-200 text-base outline-none py-1 px-3 leading-8 transition-colorsduration-200 ease-in-out ${InputExtraCss}`  }
-      />
+        />
     </>
   );
 }

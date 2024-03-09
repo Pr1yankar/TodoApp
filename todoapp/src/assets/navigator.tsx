@@ -26,7 +26,7 @@ function NavBar({ Position, Icon, Left = [], Center = [], Right=[] , ExtraCss} :
   
 
   return (
-    <header className={"container-fluid text-gray-600 body-font w-full py-1 glass-container2 " + Position + " " + ExtraCss }>
+    <header className={`container-fluid text-gray-600 body-font w-full py-1 ${Position} ${ExtraCss}` }>
       <div className={"grid grid-cols-3  w-full items-center "}>
         
         
