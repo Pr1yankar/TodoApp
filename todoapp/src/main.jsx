@@ -11,7 +11,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './assets/index.css'
-
+import "./assets/App.css"
 
 import "bootstrap/dist/css/bootstrap.css"
 import "bootstrap/dist/js/bootstrap.bundle"

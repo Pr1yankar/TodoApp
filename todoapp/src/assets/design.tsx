@@ -23,23 +23,11 @@ function CreateButtons({
   Type = "button",
   Style = "primary",
   Button_Size = "",
-  ExtraCss = ""
+  ExtraCss
 }: ButtonProps) {
   if (Button_Size != "") Button_Size = "btn-" + Button_Size;
  
-  let st =
-    "btn btn-" +
-    Style +
-    " " +
-    Button_Size +
-    " rounded-4 " +
-    "font-bold " +
-    "text-center " +
-    "font-mono " +
-    " text-slate-900 hover:text-zinc-50 " +
-    " custom-font "+
-    " px-4 "+
-    ExtraCss;
+  let st =`btn btn-${Style} ${Button_Size} rounded-4 font-bold text-center font-mono text-slate-900 hover:text-zinc-50 custom-font px-4 ${ExtraCss}`;
   return (
 
         <a
@@ -78,7 +66,7 @@ function Input({ type = "text", id, name, label, LabelExtraCss , InputExtraCss }
     <>
       <label
         htmlFor={id}
-        className={"leading-7 fs-6 text-gray-900 font-semibold fw-normal font-mono custom-font " + {LabelExtraCss}}
+        className={`leading-7 fs-6 text-gray-900 font-semibold fw-normal font-mono custom-font ${LabelExtraCss}` }
       >
         {label}
       </label>
@@ -87,7 +75,7 @@ function Input({ type = "text", id, name, label, LabelExtraCss , InputExtraCss }
         key={id}
         id={id}
         name={name}
-        className={"w-full bg-transparent rounded-5 border border-gray-300 focus:border-indigo-500focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colorsduration-200 ease-in-out " + {InputExtraCss} }
+        className={`w-full bg-transparent rounded-5 border border-gray-300 focus:border-indigo-500focus:ring-2 focus:ring-indigo-200 text-base outline-none py-1 px-3 leading-8 transition-colorsduration-200 ease-in-out ${InputExtraCss}`  }
       />
     </>
   );
@@ -114,19 +102,19 @@ function Form({Base_key, Heading, Tags, Button, AffterButton = [], ExtraCss }) {
         }
         key={Base_key+"-Form-base"}
       >
-        <h1 className="text-gray-900 text-5xl font-medium title-font mb-3 custom-center custom-font" key={Base_key+"-Form-heading"}>
+        <h1 className="text-gray-900 text-5xl font-medium title-font mb-3 custom-center custom-font" key={`${Base_key}-Form-Heading`}>
           {Heading}
         </h1>
 
         {Tags.map((tag,index) => (
-          <div className="relative mb-3 flex flex-col items-center w-full gap-1" key={Base_key+"-Form-BeforeButton-"+index}>
+          <div className="relative mb-3 flex flex-col items-center w-full gap-1" key={`${Base_key}-Form-BeforeButton${index}`}>
             {tag}
           </div>
         ))}
         {Button}
 
         {AffterButton.map((tag,index) => (
-          <div className="relative mb-3 flex flex-col items-center w-full gap-1" key={Base_key+"-Form-AffterButton-"+index}>
+          <div className="relative mb-3 flex flex-col items-center w-full gap-1" key={`${Base_key}-Form-AffterButton${index}`}>
             {tag}
           </div>
         ))}

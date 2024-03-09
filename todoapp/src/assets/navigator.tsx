@@ -34,8 +34,8 @@ function NavBar({ Position, Icon, Left = [], Center = [], Right=[] , ExtraCss} :
         <div>
           <div className="d-flex flex-row justify-content-start items-center ">
             {Icon}
-            {Left.map((items) => (
-              <div className="px-2">{items}</div>
+            {Left.map((items,index) => (
+              <div className="px-2" key={`Nav-Left-Key${index}`}>{items}</div>
             ))}
           </div>
         </div>
@@ -45,8 +45,8 @@ function NavBar({ Position, Icon, Left = [], Center = [], Right=[] , ExtraCss} :
         <div>
       
           <div className="d-flex flex-row justify-content-evenly items-center ">
-            {Center.map((items) => (
-              <div className="px-2">{items}</div>
+            {Center.map((items,index) => (
+              <div className="px-2" key={`Nav-Center-Key${index}`}>{items}</div>
             ))}
           </div>
         
@@ -56,8 +56,8 @@ function NavBar({ Position, Icon, Left = [], Center = [], Right=[] , ExtraCss} :
 
         <div>
           <div className="d-flex flex-row justify-content-end items-center ">
-            {Right.map((items) => (
-              <div className="px-2">{items}</div>
+            {Right.map((items,index) => (
+              <div className="px-2" key={`Nav-Right-Key${index}`}>{items}</div>
             ))}
           </div>
         </div>
