@@ -6,8 +6,8 @@ function About(){
 <section className="text-gray-600 body-font">
   <div className="container px-5 py-24 mx-auto">
     <div className="text-center mb-20">
-      <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Raw Denim Heirloom Man Braid</h1>
-      <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug.</p>
+      <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">About Us</h1>
+      <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Through intuitive design and innovative technology, we provide users with a seamless experience to organize their lives effectively. We prioritize simplicity, functionality, and user-centricity, aiming to empower individuals to achieve their goals and lead more balanced lives. With a commitment to continuous improvement and collaboration, we strive to be the go-to solution for anyone seeking to enhance their productivity and well-being.</p>
       <div className="flex mt-6 justify-center">
         <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
       </div>
@@ -20,8 +20,8 @@ function About(){
           </svg>
         </div>
         <div className="flex-grow">
-          <h2 className="text-gray-900 text-lg title-font font-medium mb-3">Shooting Stars</h2>
-          <p className="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
+          <h2 className="text-gray-900 text-lg title-font font-medium mb-3">Enhancing Life Balance</h2>
+          <p className="leading-relaxed text-base">We are committed to helping users achieve a healthier work-life balance by offering features that promote prioritization, time management, and mindfulness.</p>
           <a className="mt-3 text-indigo-500 inline-flex items-center">Learn More
             <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -38,8 +38,8 @@ function About(){
           </svg>
         </div>
         <div className="flex-grow">
-          <h2 className="text-gray-900 text-lg title-font font-medium mb-3">The Catalyzer</h2>
-          <p className="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
+          <h2 className="text-gray-900 text-lg title-font font-medium mb-3">Seamless Task Management:</h2>
+          <p className="leading-relaxed text-base">We envision a future where task management is seamlessly integrated into users' daily lives, enhancing productivity and reducing stress.</p>
           <a className="mt-3 text-indigo-500 inline-flex items-center">Learn More
             <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -55,8 +55,8 @@ function About(){
           </svg>
         </div>
         <div className="flex-grow">
-          <h2 className="text-gray-900 text-lg title-font font-medium mb-3">Neptune</h2>
-          <p className="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard.</p>
+          <h2 className="text-gray-900 text-lg title-font font-medium mb-3">Empowering Productivity</h2>
+          <p className="leading-relaxed text-base">We strive to empower individuals to accomplish more by providing them with intuitive and efficient tools to manage their tasks and projects effectively.</p>
           <a className="mt-3 text-indigo-500 inline-flex items-center">Learn More
             <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -65,7 +65,7 @@ function About(){
         </div>
       </div>
     </div>
-    <button className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+    <button className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Join Now</button>
   </div>
 </section>
 </>

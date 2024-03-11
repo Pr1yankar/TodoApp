@@ -26,23 +26,39 @@ background: linear-gradient(16deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 1
   
 }
 
+.card-css{
+  background: #780206;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
 .glass-container {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 4px 4px 30px rgba(20, 20, 20, 0.15);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+/* From https://css.glass */
+/* From https://css.glass */
+background: rgba(163 ,163 ,163, 0.21);
+border-radius: 16px;
+box-shadow: 2px 4px 30px rgba(0, 0, 0, 0.15);
+backdrop-filter: blur(12.1px);
+-webkit-backdrop-filter: blur(12.1px);
+border: 1px solid rgba(163, 163, 163, 0.112);
 }
 
 .glass-container2{
-  background: rgba(183, 95, 205, 0.09);
+  background: rgba(163 ,163 ,163, 0.3);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(1.4px);
+  backdrop-filter: blur(3.4px);
   -webkit-backdrop-filter: blur(1.4px);
 }
 
 
 .NavLinksCss:hover{
   text-decoration: underline;
+}
+
+.dark-bg{
+  /* background-image: linear-gradient(to bottom, #ff9a9e 0%, #fecfef 99%, #fecfef 100%); */
+  background: linear-gradient(16deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); 
+
+
 }

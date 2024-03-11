@@ -6,39 +6,32 @@
 //
 /////////////////////////////////////////////////////////////
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface ButtonProps {
   Name: string;
-  Onclick? ;
+  Onclick?;
   Type?: "submit" | "reset" | "button";
   Style?: "primary" | "secondary" | "success" | "dark" | "info";
   Button_Size?: "sm" | "lg" | "";
-  ExtraCss? : string;
+  ExtraCss?: string;
 }
 
 function CreateButtons({
   Name,
-  Onclick = (() => {}),
+  Onclick = () => {},
   Type = "button",
   Style = "primary",
   Button_Size = "",
-  ExtraCss
+  ExtraCss,
 }: ButtonProps) {
   if (Button_Size != "") Button_Size = "btn-" + Button_Size;
- 
-  let st =`btn btn-${Style} ${Button_Size} rounded-4 font-bold text-center font-mono  custom-font px-4 ${ExtraCss}`;
+
+  let st = `btn btn-${Style} ${Button_Size} rounded-4 font-bold text-center font-mono  custom-font px-4 ${ExtraCss}`;
   return (
-
-        <a
-          type={Type}
-          className={st}
-          onClick={Onclick}
-          key={Name}
-        >
-          {Name}
-        </a>
-
+    <a type={Type} className={st} onClick={Onclick} key={Name}>
+      {Name}
+    </a>
   );
 }
 
@@ -61,13 +54,19 @@ function CheckBox({ Name, Id, Value = "", label }) {
   );
 }
 
-function Input({ type = "text", id, name, label, LabelExtraCss ,InputExtraCss  }) {
-  
+function Input({
+  type = "text",
+  id,
+  name,
+  label,
+  LabelExtraCss,
+  InputExtraCss,
+}) {
   return (
     <>
       <label
         htmlFor={id}
-        className={`leading-7 fs-6 text-gray-900 font-semibold fw-normal font-mono custom-font ${LabelExtraCss}` }
+        className={`leading-7 fs-6 text-gray-900 font-semibold fw-normal font-mono custom-font ${LabelExtraCss}`}
       >
         {label}
       </label>
@@ -76,8 +75,8 @@ function Input({ type = "text", id, name, label, LabelExtraCss ,InputExtraCss  }
         key={id}
         id={id}
         name={name}
-        className={`w-full bg-transparent rounded-5 border border-gray-300 focus:border-indigo-500focus:ring-2 focus:ring-indigo-200 text-base outline-none py-1 px-3 leading-8 transition-colorsduration-200 ease-in-out ${InputExtraCss}`  }
-        />
+        className={` w-full bg-transparent rounded-5 border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none py-1 px-3 leading-8 transition-colorsduration-200 ease-in-out ${InputExtraCss}`}
+      />
     </>
   );
 }
@@ -85,15 +84,22 @@ function Input({ type = "text", id, name, label, LabelExtraCss ,InputExtraCss  }
 function ParalleInput({ FInput, SInput }) {
   return (
     <>
-      <div className="relative flex flex-row items-center w-full gap-2">
-        <div className="relative flex flex-col items-center w-50">{FInput}</div>
-        <div className="relative flex flex-col items-center w-50">{SInput}</div>
+      <div className="relative flex  max-sm:flex-col items-center w-full ">
+        <div className="relative flex flex-col items-center px-1">{FInput}</div>
+        <div className="relative flex flex-col items-center px-1">{SInput}</div>
       </div>
     </>
   );
 }
 
-function Form({Base_key, Heading, Tags, Button, AffterButton = [], ExtraCss }) {
+function Form({
+  Base_key,
+  Heading,
+  Tags,
+  Button,
+  AffterButton = [],
+  ExtraCss,
+}) {
   return (
     <>
       <div
@@ -101,21 +107,30 @@ function Form({Base_key, Heading, Tags, Button, AffterButton = [], ExtraCss }) {
           "rounded-lg p-8 flex flex-col md:ml-auto w-full mt-1 md:mt-0 items-center " +
           ExtraCss
         }
-        key={Base_key+"-Form-base"}
+        key={Base_key + "-Form-base"}
       >
-        <h1 className="text-gray-900 text-5xl font-medium title-font mb-3 custom-center custom-font" key={`${Base_key}-Form-Heading`}>
+        <h1
+          className="text-gray-900 text-5xl font-medium title-font mb-3 custom-center custom-font"
+          key={`${Base_key}-Form-Heading`}
+        >
           {Heading}
         </h1>
 
-        {Tags.map((tag,index) => (
-          <div className="relative mb-3 flex flex-col items-center w-full gap-1" key={`${Base_key}-Form-BeforeButton${index}`}>
+        {Tags.map((tag, index) => (
+          <div
+            className="relative mb-3 flex flex-col items-center w-full gap-1"
+            key={`${Base_key}-Form-BeforeButton${index}`}
+          >
             {tag}
           </div>
         ))}
         {Button}
 
-        {AffterButton.map((tag,index) => (
-          <div className="relative mb-3 flex flex-col items-center w-full gap-1" key={`${Base_key}-Form-AffterButton${index}`}>
+        {AffterButton.map((tag, index) => (
+          <div
+            className="relative mb-3 flex flex-col items-center w-full gap-1"
+            key={`${Base_key}-Form-AffterButton${index}`}
+          >
             {tag}
           </div>
         ))}
@@ -137,7 +152,7 @@ function AsideLeft({ Content }) {
 function Partitionar({ LeftContent, RightContent }) {
   return (
     <section className="text-gray-600 body-font">
-      <div className="container px-5 py-24 mx-auto flex flex-wrap items-center">
+      <div className="container px-5 py-20 mx-auto flex flex-wrap items-center">
         <AsideLeft Content={LeftContent} />
         <AsideRight Content={RightContent} />
       </div>
@@ -148,15 +163,33 @@ function Partitionar({ LeftContent, RightContent }) {
 // TODO :: Need to implemented
 
 // TODO :: {
-//   /* <h1 className="title-font font-medium text-3xl text-gray-900">Slow-carb next level shoindcgoitch ethical authentic, poko scenester</h1>
-// <p className="leading-relaxed mt-4">Poke slow-carb mixtape knausgaard, typewriter street art gentrify hammock starladder roathse. Craies vegan tousled etsy austin.</p> */
+//   
 // }
 
-function TextEffect() {
-  let Write = <h1></h1>;
-  let [Base, setBase] = useState(Write);
+function TextEffect({Text , Delay = 300}) {
+ 
+  
+  let [Base, setBase] = useState(Text[0]);
+  let [index , setIndex] = useState(1)
+  useEffect(() => {
+      if(index >= Text.length) return;
+      let interval = setInterval(() => {
+        setBase((prev) => {
+          return (prev + Text[index])
+        });
+      setIndex((index) => index+1)
+        
+      }, Delay);
+      
+    
+    return () => clearInterval(interval)
+  },
+    
+  [Base]);
 
-  return <>{Base}</>;
+  return (
+    <>{Base}</>
+  );
 }
 
 export {
