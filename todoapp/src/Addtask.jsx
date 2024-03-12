@@ -19,11 +19,13 @@ function AddTaskForm() {
 
 
     let WorkTitle = document.getElementById('worktitle').value
-    let status = document.getElementById('status').value
+    let status = document.getElementById('Status').value
     let deadline = document.getElementById('deadline').value
     let workdesc = document.getElementById('workdesc').value
-    let Status = document.getElementById('Status').value
     
+    if(WorkTitle && status && deadline && workdesc  ){
+      
+    }
 
 
    

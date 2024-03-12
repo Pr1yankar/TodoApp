@@ -26,13 +26,13 @@ function NavBar({ Position, Icon, Left = [], Center = [], Right=[] , ExtraCss} :
   
 
   return (
-    <header className={`container-fluid text-gray-600 body-font w-full py-1 ${Position} ${ExtraCss}` }>
-      <div className={"grid grid-cols-3  w-full items-center "}>
+    <header className={`container-fluid text-gray-600 body-font w-full py-1 grid grid-cols-3   w-full  items-center ${Position} ${ExtraCss}` }>
+      
         
         
 
-        <div>
-          <div className="d-flex flex-row justify-content-start items-center ">
+        <div className="shrink">
+          <div className="flex flex-row justify-content-start items-center shrink">
             {Icon}
             {Left.map((items,index) => (
               <div className="px-2" key={`Nav-Left-Key${index}`}>{items}</div>
@@ -42,9 +42,9 @@ function NavBar({ Position, Icon, Left = [], Center = [], Right=[] , ExtraCss} :
 
         {/* Center */}
         
-        <div>
+        <div className="shrink">
       
-          <div className="d-flex flex-row justify-content-evenly items-center ">
+          <div className="flex flex-row justify-content-evenly items-center shrink">
             {Center.map((items,index) => (
               <div className="px-2" key={`Nav-Center-Key${index}`}>{items}</div>
             ))}
@@ -54,14 +54,14 @@ function NavBar({ Position, Icon, Left = [], Center = [], Right=[] , ExtraCss} :
 
         {/* Right */}
 
-        <div>
-          <div className="d-flex flex-row justify-content-end items-center ">
+        <div className="shrink">
+          <div className=" flex flex-row justify-content-end items-center shrink">
             {Right.map((items,index) => (
               <div className="px-2" key={`Nav-Right-Key${index}`}>{items}</div>
             ))}
           </div>
         </div>
-      </div>
+      
     </header>
   );
 }

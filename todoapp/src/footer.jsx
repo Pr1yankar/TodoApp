@@ -5,7 +5,7 @@ function FooterLinks({ Title, cont }) {
   //   console.log(cont);
   return (
     <>
-      <div>
+      <div >
         <div className="lg:w-3/4 md:w-1/2 w-full px-4">
           <h2 className="title-font font-lg text-gray-900 tracking-widest text-lg mb-3">
             {Title}
