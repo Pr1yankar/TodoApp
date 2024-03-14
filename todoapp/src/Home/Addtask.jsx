@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Input,CreateButtons } from "../assets/design";
 
 function AddTaskForm() {
+  const navigate = useNavigate();
   
     const CustomCss =
     " text-grey border-black shadow-[inset_20px_20px_20px_0_rgba(0,0,0,0.1)]";
@@ -31,7 +32,6 @@ function AddTaskForm() {
    
   }
 
-  const navigate = useNavigate();
   function SubmitForm() {
     let data = FetchDataFromForm();
 
@@ -55,7 +55,7 @@ function AddTaskForm() {
     />
   );
 
-  
+    
 let Deadline = (
     <Input
       name="deadline"
@@ -117,9 +117,6 @@ let Deadline = (
 }
 
 
-function UpdateTask(){
-
-}
 
 
 
