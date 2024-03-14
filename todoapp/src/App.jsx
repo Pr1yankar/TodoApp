@@ -7,16 +7,16 @@
 /////////////////////////////////////////////////////////////
 
 import { useState } from "react";
-import "./assets/App.css";
+import "./App.css";
 import React from "react";
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Routes  } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.css";
 import { renderMatches } from "react-router-dom";
-import { HomePage } from "./HomePage.jsx";
-import Footer from "./footer.jsx";
-import MainBody from "./todopage.jsx";
+import { HomePage } from "./Login/HomePage.jsx";
+import Footer from "./assets/footer.jsx";
+import MainBody from "./Home/todopage.jsx";
 function App() {
   return (
     <>
